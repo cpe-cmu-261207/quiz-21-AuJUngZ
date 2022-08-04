@@ -22,9 +22,9 @@ async function callApi() {
   address.innerHTML = `${data.location.city}, ${data.location.state}`;
   email.innerHTML = data.email;
   if (data.gender == "female") {
-    emoji.innerText = "👨";
-  } else {
     emoji.innerText = "👧";
+  } else {
+    emoji.innerText = "👨";
   }
 }
 
@@ -34,4 +34,6 @@ generate.onclick = () => {
 
 img.onload = () => {
   loadingProfile.style.display = "none";
+
+  generate.style.display = "none";
 };
